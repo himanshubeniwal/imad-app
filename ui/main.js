@@ -1,7 +1,24 @@
+/*
 console.log('Loaded!');
+
+
 //code to change the content of page 
+
+
+
 var element= document.getElementById("tobechange");
 element.innerHTML= " this is changed text ";
+
+*/ 
+var counter=0
+var button = document.getElementById("counter");
+button.onclick = function() {
+  counter=counter+1;
+  var span = document.getElementById("count");
+  span.innerHTML=counter.toString();
+  
+    
+};
 
 /*
 // move the image to right
@@ -18,3 +35,4 @@ pic.onclick = function () {
     
 };   
 */
+
