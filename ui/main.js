@@ -1,10 +1,7 @@
 /*
 console.log('Loaded!');
 
-
 //code to change the content of page 
-
-
 
 var element= document.getElementById("tobechange");
 element.innerHTML= " this is changed text ";
@@ -13,11 +10,23 @@ element.innerHTML= " this is changed text ";
 var counter=0
 var button = document.getElementById("counter");
 button.onclick = function() {
-  counter=counter+1;
-  var span = document.getElementById("count");
-  span.innerHTML=counter.toString();
+    // create a Request to counter endpoint 
+    var request = new XMLHttpRequest();
+  //capture the response and store 
+  request.onreadystatechange == function() {
+      if(request.readyState)===XMLHttpRequest.DONE) {
+          if(request.status==200){
+           var counter=request.responseText;
+           var span = document.getElementById("count");
+           span.innerHTML=counter.toString();
+          }
+      };
+      // make the request 
+      request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/',true);
+      request.send(null);
+  };
   
-    
+  //rendering the correct variable in correct span
 };
 
 /*
