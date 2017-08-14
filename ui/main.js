@@ -3,7 +3,7 @@ console.log('Loaded!');
 var element= document.getElementById("tobechange");
 element.innerHTML= " this is changed text ";
 
-
+/*
 // move the image to right
 var pic= document.getElementById('bny');
 var marginLeft=0;
@@ -16,4 +16,5 @@ function moveright() {
 pic.onclick = function () {
     var interval = setInterval(moveright,20);
     
-};
+};   
+*/
