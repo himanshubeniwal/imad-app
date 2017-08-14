@@ -7,7 +7,7 @@ var element= document.getElementById("tobechange");
 element.innerHTML= " this is changed text ";
 
 */ 
-/*
+
 var counter=0
 var button = document.getElementById("counter");
 button.onclick = function() {
@@ -27,7 +27,7 @@ button.onclick = function() {
   request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/counter',true);
       request.send(null);
 };
-*/
+
 
 //submit name
 var nameInput=document.getElementById ('name');
@@ -39,7 +39,7 @@ submit.onclick = function() {
     var names=['name1','name2','name3','name4'];
     var list='';
     for (var i=0; i<names.length; i++) {
-        list = list + '<li>' + names[i]  +' </li>';
+        list += '<li>' + names[i]  +' </li>';
     }
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
