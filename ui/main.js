@@ -6,6 +6,6 @@ element.innerHTML= " this is changed text ";
 
 // move the image to right
 var pic= document.getElementById('bny');
-pic.onClick = function () {
+pic.onclick = function () {
   pic.style.marginLeft='150px';
 };
