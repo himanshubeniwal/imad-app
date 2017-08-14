@@ -13,7 +13,7 @@ button.onclick = function() {
     // create a Request to counter endpoint 
     var request = new XMLHttpRequest();
   //capture the response and store 
-  request.onreadystatechange == function() {
+  request.onreadystatechange = function() {
       if(request.readyState === XMLHttpRequest.DONE) {
           if(request.status === 200){
            var counter=request.responseText;
@@ -21,8 +21,7 @@ button.onclick = function() {
            span.innerHTML=counter.toString();
           }
       }
-      // mnot done yet 
-      
+      // not done yet 
   };
   request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/counter',true);
       request.send(null);
