@@ -79,10 +79,18 @@ app.get('/:articlesName', function (req,res){
     res.send(createTemplate(articles[articlesName]));
 });
 
+
+// Request made to css file
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+
+// if request made to javascript file 
+app.get('/ui/main.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+// request made to image madi
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
