@@ -6,10 +6,10 @@ element.innerHTML= " this is changed text ";
 
 // move the image to right
 var pic= document.getElementById('bny');
-var marginleft=0
+var marginLeft=0
 function moveright() {
-    marginleft= marginleft + 5;
-    img.style.marginleft=marginleft+'px';
+    marginLeft= marginLeft + 5;
+    img.style.marginLeft=marginLeft+ 'px';
 }
 pic.onclick = function () {
     var interval = setInterval(moveright,50);
