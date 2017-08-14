@@ -21,12 +21,11 @@ button.onclick = function() {
            span.innerHTML=counter.toString();
           }
       }
-      // make the request 
-      request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/',true);
-      request.send(null);
+      // mnot done yet 
+      
   };
-  
-  //rendering the correct variable in correct span
+  request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/',true);
+      request.send(null);
 };
 
 /*
