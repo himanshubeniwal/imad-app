@@ -8,12 +8,12 @@ element.innerHTML= " this is changed text ";
 var pic= document.getElementById('bny');
 var marginLeft=0;
 function moveright() {
-    marginLeft= marginLeft + 5;
+    marginLeft= marginLeft + 1;
     if (marginLeft <300){
     pic.style.marginLeft=marginLeft+ 'px';
 }
 }
 pic.onclick = function () {
-    var interval = setInterval(moveright,50);
+    var interval = setInterval(moveright,20);
     
 };
