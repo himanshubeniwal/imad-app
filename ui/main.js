@@ -6,7 +6,7 @@ element.innerHTML= " this is changed text ";
 
 // move the image to right
 var pic= document.getElementById('bny');
-var marginLeft=0
+var marginLeft=0;
 function moveright() {
     marginLeft= marginLeft + 5;
     pic.style.marginLeft=marginLeft+ 'px';
