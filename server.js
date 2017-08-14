@@ -21,14 +21,14 @@ var articles= {
             heading : 'Article Two',
             date: 'Aug. 16,2017',
             content: `
-            <p>This is content for my Second aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+            <p>This is content for my Second aptpahae na pbnnnnnnba bf n bbbbbbbb  b b b b bbbb bbbbb bbbb bbbbbbb bbbbbbbaritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
                         ` 
         },
         'article-three' : {  title: 'Article Three | Himanshu Beniwal',
             heading : 'Article Three',
             date: 'Aug. 17,2017',
             content: `
-            <p>This is content for my Third aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+            <p>This is content for my Third content parag of  bag pga egnkaen kp abaritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
         ` } 
 };
 
