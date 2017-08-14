@@ -24,7 +24,7 @@ button.onclick = function() {
       // mnot done yet 
       
   };
-  request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/',true);
+  request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/counter',true);
       request.send(null);
 };
 
