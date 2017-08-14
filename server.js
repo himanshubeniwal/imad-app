@@ -5,17 +5,33 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne= {
-    title: 'Article one | Himanshu Beniwal',
-    heading : 'Article One',
-    date: 'Aug. 15,2017',
-    content: `
-    <p>This is content for my fist aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+var articles= {
+        'article-one':{
+            title: 'Article one | Himanshu Beniwal',
+            heading : 'Article One',
+            date: 'Aug. 15,2017',
+            content: `
             <p>This is content for my fist aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
-                <p>This is content for my fist aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
-                <p>This is content for my fist aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
-                `
+                    <p>This is content for my fist aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+                        <p>This is content for my fist aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+                        <p>This is content for my fist aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+                        `
+        },
+        'article-two': {  title: 'Article Two | Himanshu Beniwal',
+            heading : 'Article Two',
+            date: 'Aug. 16,2017',
+            content: `
+            <p>This is content for my Second aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+                        ` 
+        },
+        'article-three' : {  title: 'Article Three | Himanshu Beniwal',
+            heading : 'Article Three',
+            date: 'Aug. 17,2017',
+            content: `
+            <p>This is content for my Third aritwagiagbaenkfrab jrb vfkv jfb  ljlfnekr ben ner net ne</p>
+        ` } 
 };
+
 function createTemplate(data){
     var title= data.title;
     var heading= data.heading;
@@ -56,8 +72,11 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one', function (req,res){
-    res.send(createTemplate(articleOne));
+app.get('/:articlesName', function (req,res){
+    //article name will be article one
+    // articles [articlesname] == {}content object for article one 
+    var articlesName=req.params.articlesName;
+    res.send(createTemplate(articles[articlesName]));
 });
 
 app.get('/article-two', function (req,res){
