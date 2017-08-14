@@ -9,7 +9,7 @@ var pic= document.getElementById('bny');
 var marginLeft=0
 function moveright() {
     marginLeft= marginLeft + 5;
-    img.style.marginLeft=marginLeft+ 'px';
+    pic.style.marginLeft=marginLeft+ 'px';
 }
 pic.onclick = function () {
     var interval = setInterval(moveright,50);
