@@ -16,6 +16,7 @@ button.onclick = function() {
   //capture the response and store 
   request.onreadystatechange = function() {
       if(request.readyState === XMLHttpRequest.DONE) {
+          //take some action
           if(request.status === 200){
            var counter=request.responseText;
            var span = document.getElementById("count");
@@ -35,6 +36,7 @@ var name=nameInput.value;
 var submit= document.getElementById ('submit_btn');
 submit.onclick = function() {
   // make a request to server and send the name 
+  
   //capture a list of names and render as a list
     var names=['name1','name2','name3','name4'];
     var list='';
