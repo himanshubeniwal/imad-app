@@ -8,6 +8,7 @@ element.innerHTML= " this is changed text ";
 
 */ 
 
+/*
 var counter=0;
 var button = document.getElementById("counter");
 button.onclick = function() {
@@ -30,7 +31,15 @@ button.onclick = function() {
 };
 
 
-//submit name
+var nameInput=document.getElementById ('name');
+var name=nameInput.value;
+  request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/submit-name?name=' + name,true);
+      request.send(null);
+  // make a request to server and send the name 
+  
+*/
+
+//submit username / password to log in !! 
 
 var submit= document.getElementById ('submit_btn');
 submit.onclick = function() {
@@ -41,22 +50,27 @@ submit.onclick = function() {
       if(request.readyState === XMLHttpRequest.DONE) {
           //take some action
           if(request.status === 200){
-            var names= request.responseText;
-            names=JSON.parse(names);
-    var list='';
-    for (var i=0; i<names.length; i++) {
-        list += '<li>' + names[i]  +' </li>';
-    }
-    var ul=document.getElementById('namelist');
-    ul.innerHTML=list;
+            alert("Logged in successfully!!! ");
+          }
+          else if ( request.status === 403) {
+              alert("username/password is incorrect");
+          }
+          else if ( request.status === 500 ) {
+              alert(" SErver went wrong ");
           }
       }
       // not done yet 
   };
-  var nameInput=document.getElementById ('name');
-var name=nameInput.value;
-  request.open('GET','http://himanshubeniwal015.imad.hasura-app.io/submit-name?name=' + name,true);
-      request.send(null);
+  
+  
+var username=document.getElementById ('username').value;
+var password=document.getElementById ('password').value;
+console.log(username);
+console.log(password);
+
+  request.open('POST','http://himanshubeniwal015.imad.hasura-app.io/login',true);
+  request.setRequestHeader('Content-Type', 'application/json');
+      request.send(JSON.stringify({username: username, password:password}));
   // make a request to server and send the name 
   
   
